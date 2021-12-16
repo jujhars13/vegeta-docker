@@ -65,7 +65,7 @@ workflows:
             branches:
               ignore: /.*/
       - publish-tag:
-          context: org-global
+          context: global
           requires:
             - build
           filters:

@@ -13,13 +13,11 @@ LABEL \
   app.tag="vegeta$VEGETA_VERSION"
 
 RUN set -ex \
- && apk add --no-cache ca-certificates jq \
- && apk add --no-cache --virtual .build-deps \
-    openssl \
- && wget -q "https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta_${VEGETA_VERSION}_linux_amd64.tar.gz" -O /tmp/vegeta.tar.gz \
- && cd bin \
- && tar xzf /tmp/vegeta.tar.gz \
+ && apt-get update \
+ && apt-get install -y ca-certificates jq openssl curl \
+ && curl -L --output /tmp/vegeta.tar.gz "https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta_${VEGETA_VERSION}_linux_amd64.tar.gz" \
+ && (cd /bin && tar xzf /tmp/vegeta.tar.gz) \
  && rm /tmp/vegeta.tar.gz \
- && apk del .build-deps
+ && apt-get clean
 
 CMD [ "/bin/vegeta", "-help" ]

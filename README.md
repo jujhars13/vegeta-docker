@@ -14,7 +14,7 @@ Docker image for the [Vegeta](https://github.com/tsenart/vegeta) HTTP load testi
 To display help:
 
 ```bash
-docker run --rm -i jujhars13/vegeta
+docker run --rm -i jujhars13/vegeta\
 ```
 
 Example:

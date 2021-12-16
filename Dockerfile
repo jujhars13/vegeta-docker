@@ -1,14 +1,14 @@
-FROM alpine:3.10.1
+FROM debian:bullseye-slim
 
 ENV VEGETA_VERSION 12.8.4
 
 LABEL \
-  maintainer="Peter Evans <mail@peterevans.dev>" \
-  org.opencontainers.image.title="vegeta" \
+  maintainer="Jujhar Singh <mail@jujhar.com>" \
+  org.opencontainers.image.title="vegeta w/ debian" \
   org.opencontainers.image.description="Docker image for the Vegeta HTTP load testing tool." \
-  org.opencontainers.image.authors="Peter Evans <mail@peterevans.dev>" \
-  org.opencontainers.image.url="https://github.com/peter-evans/vegeta-docker" \
-  org.opencontainers.image.vendor="https://peterevans.dev" \
+  org.opencontainers.image.authors="Jujhar Singh <mail@jujhar.com>" \
+  org.opencontainers.image.url="https://github.com/jujhars13/vegeta-docker" \
+  org.opencontainers.image.vendor="https://jujhar.com" \
   org.opencontainers.image.licenses="MIT" \
   app.tag="vegeta$VEGETA_VERSION"
 

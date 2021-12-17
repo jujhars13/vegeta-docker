@@ -8,8 +8,8 @@ Docker image for the [Vegeta](https://github.com/tsenart/vegeta) HTTP load testi
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.1`, `latest`, `1.1-vegeta12.8.4-bullseye-slim`, (*1.1/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/1.1)
-- [`1.0`, `1.0-vegeta12.8.4-bullseye-slim`, (*1.0/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/1.0)
+- [`v1.1`, `latest`, `v1.1-vegeta12.8.4-bullseye-slim`, (*1.1/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/v1.1)
+- [`v1.0`, `v1.0-vegeta12.8.4-bullseye-slim`, (*1.0/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/v1.0)
 
 ## Usage
 

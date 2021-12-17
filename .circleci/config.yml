@@ -61,7 +61,7 @@ workflows:
       - build:
           filters:
             tags:
-              only: /^v.*/
+              only: /^v.*|latest/
             branches:
               ignore: /.*/
       - publish-tag:
@@ -70,6 +70,6 @@ workflows:
             - build
           filters:
             tags:
-              only: /^v.*/
+              only: /^v.*|latest/
             branches:
               ignore: /.*/

@@ -1,6 +1,15 @@
-FROM debian:bullseye-slim
+FROM debian:bullseye-slim as build
 
 ENV VEGETA_VERSION 12.8.4
+
+WORKDIR /tmp
+
+RUN apt-get update \
+ && apt-get install --no-install-recommends -y ca-certificates jq openssl curl \
+ && curl -L --output /tmp/vegeta.tar.gz "https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta_${VEGETA_VERSION}_linux_amd64.tar.gz" \
+ && tar xzf /tmp/vegeta.tar.gz
+
+FROM debian:bullseye-slim as final
 
 LABEL \
   maintainer="Jujhar Singh <mail@jujhar.com>" \
@@ -12,12 +21,6 @@ LABEL \
   org.opencontainers.image.licenses="MIT" \
   app.tag="vegeta$VEGETA_VERSION"
 
-RUN set -ex \
- && apt-get update \
- && apt-get install -y ca-certificates jq openssl curl \
- && curl -L --output /tmp/vegeta.tar.gz "https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta_${VEGETA_VERSION}_linux_amd64.tar.gz" \
- && (cd /bin && tar xzf /tmp/vegeta.tar.gz) \
- && rm /tmp/vegeta.tar.gz \
- && apt-get clean
+COPY --from=build /tmp/vegeta /bin
 
 CMD [ "/bin/vegeta", "-help" ]

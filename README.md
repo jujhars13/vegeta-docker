@@ -22,8 +22,8 @@ Example:
 
 ```bash
 docker run --rm -i jujhars13/vegeta \
-"sh -c \
-  echo 'GET http://www.example.com' | \
+/bin/bash -c \
+  "echo 'GET http://www.example.com' | \
     vegeta attack -rate=10 -duration=30s | \
     tee results.bin | \
     vegeta report"

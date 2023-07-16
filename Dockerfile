@@ -1,6 +1,6 @@
-FROM debian:bullseye-slim as build
+FROM debian:bookworm-slim as build
 
-ENV VEGETA_VERSION 12.8.4
+ENV VEGETA_VERSION 12.9.0
 
 WORKDIR /tmp
 
@@ -9,7 +9,7 @@ RUN apt-get update \
  && curl -L --output /tmp/vegeta.tar.gz "https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta_${VEGETA_VERSION}_linux_amd64.tar.gz" \
  && tar xzf /tmp/vegeta.tar.gz
 
-FROM debian:bullseye-slim as final
+FROM debian:bookworm-slim as final
 
 LABEL \
   maintainer="Jujhar Singh <mail@jujhar.com>" \

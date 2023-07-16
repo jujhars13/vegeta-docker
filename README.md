@@ -8,16 +8,16 @@ Docker image for the [Vegeta](https://github.com/tsenart/vegeta) HTTP load testi
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`v1.2`, `latest`, `v1.2-vegeta12.9.0-bookworm-slim`, (*v1.2/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/v1.2/Dockerfile)
-- [`v1.1`, `v1.1-vegeta12.8.4-bullseye-slim`, (*v1.1/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/v1.1/Dockerfile)
-- [`v1.0`, `v1.0-vegeta12.8.4-bullseye-slim`, (*v1.0/Dockerfile*)](https://github.com/jujhars13/vegeta-docker/tree/v1.0/Dockerfile)
+- [`1.2`, `latest`, (_v1.2/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.2/Dockerfile)
+- [`1.1`, (_v1.1/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.1/Dockerfile)
+- [`1.0`, (_v1.0/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.0/Dockerfile)
 
 ## Usage
 
 To display help:
 
 ```bash
-docker run --rm -i jujhars13/vegeta
+docker run --rm -i jujhars13/vegeta:1.2
 ```
 
 Example:

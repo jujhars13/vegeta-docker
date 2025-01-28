@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim as build
 
-ENV VEGETA_VERSION 12.9.0
+ENV VEGETA_VERSION 12.12.0
 
 WORKDIR /tmp
 

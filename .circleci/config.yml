@@ -4,7 +4,7 @@ executors:
     environment:
       IMAGE_NAME: jujhars13/vegeta
     docker:
-      - image: circleci/buildpack-deps:bookworm
+      - image: debian:bookworm-slim
 jobs:
   build:
     executor: docker-executor

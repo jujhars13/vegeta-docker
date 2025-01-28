@@ -25,7 +25,7 @@ docker run --rm -i jujhars13/vegeta:latest
 Example:
 
 ```bash
-docker run --rm -i jujhars13/vegeta \
+docker run --rm -i jujhars13/vegeta:latest \
 /bin/bash -c \
   "echo 'GET http://www.example.com' | \
     vegeta attack -rate=10 -duration=30s | \
@@ -55,7 +55,7 @@ kubectl run vegeta --rm --attach --restart=Never --image="jujhars13/vegeta" -- s
 
 ## History
 
-- 2025-02-14 `v1.3.1` forces tls cet update
+- 2025-02-14 `v1.3.1` forces tls cert store update
 - 2025-02-14 `v1.3` version bump to latest Vegeta and Debian
 - 2022-02-14 `v1.1` version bump to pull in latest security updates to Debian 11 Bullseye
 

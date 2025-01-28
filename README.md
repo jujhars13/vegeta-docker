@@ -8,7 +8,8 @@ Docker image for the [Vegeta](https://github.com/tsenart/vegeta) HTTP load testi
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.3`, `latest`, (_v1.3/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.3/Dockerfile)
+- [`1.3.1`, `latest`, (_v1.3.1/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.3.1/Dockerfile)
+- [`1.3`, (_v1.3/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.3/Dockerfile)
 - [`1.2`, (_v1.2/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.2/Dockerfile)
 - [`1.1`, (_v1.1/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.1/Dockerfile)
 - [`1.0`, (_v1.0/Dockerfile_)](https://github.com/jujhars13/vegeta-docker/tree/v1.0/Dockerfile)
@@ -54,6 +55,7 @@ kubectl run vegeta --rm --attach --restart=Never --image="jujhars13/vegeta" -- s
 
 ## History
 
+- 2025-02-14 `v1.3.1` forces tls cet update
 - 2025-02-14 `v1.3` version bump to latest Vegeta and Debian
 - 2022-02-14 `v1.1` version bump to pull in latest security updates to Debian 11 Bullseye
 
